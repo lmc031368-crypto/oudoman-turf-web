@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Home() {
   const companyName = "Handan Oudoman Sports Technology Co., Ltd.";
-  const myNumber = "8615075550800"; // Your WhatsApp number
+  const myNumber = "86 18831097125"; // Your WhatsApp number
 
   return (
     <div style={{ backgroundColor: '#f8fafc', minHeight: '100vh', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#1e293b' }}>
