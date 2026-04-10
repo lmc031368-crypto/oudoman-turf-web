@@ -3,61 +3,58 @@ import React from 'react';
 
 export default function Home() {
   const companyName = "Handan Oudoman Sports Technology Co., Ltd.";
-  
+  const myWhatsApp = "8615075550800";
+
   return (
-    <div style={{ backgroundColor: '#f8fafc', minHeight: '100vh', fontFamily: 'sans-serif', color: '#1e293b' }}>
-      {/* 顶部导航 */}
-      <nav style={{ backgroundColor: '#fff', padding: '15px 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-        <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#15803d' }}>OUDMAN TURF</div>
-        <a href="https://wa.me/8615075550800" style={{ backgroundColor: '#22c55e', color: 'white', padding: '10px 20px', borderRadius: '5px', textDecoration: 'none', fontWeight: 'bold' }}>
-          CONTACT US
-        </a>
+    <div style={{ backgroundColor: '#f0fdf4', minHeight: '100vh', fontFamily: 'sans-serif' }}>
+      {/* 导航栏 */}
+      <nav style={{ backgroundColor: '#ffffff', padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+        <h1 style={{ color: '#166534', margin: 0 }}>OUDMAN TURF</h1>
+        <a href={`https://wa.me/${myWhatsApp}`} style={{ backgroundColor: '#22c55e', color: 'white', padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold' }}>WhatsApp Us</a>
       </nav>
 
-      {/* 巨幕宣传 (Hero) */}
-      <header style={{ textAlign: 'center', padding: '80px 20px', background: 'linear-gradient(135deg, #166534 0%, #14532d 100%)', color: 'white' }}>
-        <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '15px' }}>{companyName}</h1>
-        <p style={{ fontSize: '18px', opacity: '0.9' }}>Leading Manufacturer of Premium Artificial Turf solutions.</p>
-      </header>
+      {/* 标题 */}
+      <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+        <h2 style={{ fontSize: '32px', color: '#111' }}>{companyName}</h2>
+        <p style={{ color: '#666', fontSize: '18px' }}>Global Supplier of Artificial Turf Solutions</p>
+      </div>
 
-      {/* 产品展示区 - 使用你上传的图片名 */}
-      <main style={{ maxWidth: '1200px', margin: '50px auto', padding: '0 20px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
-          
-          <div style={cardStyle}>
-            <img src="/gym.jpg.png" alt="Gym" style={imgStyle} />
-            <div style={{ padding: '25px' }}>
-              <h3 style={{ fontSize: '22px', marginBottom: '10px' }}>Gym & Fitness Turf</h3>
-              <p style={{ color: '#64748b', lineHeight: '1.6' }}>Heavy-duty turf designed for intense gym sled training.</p>
-            </div>
+      {/* 产品列表 */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+        
+        {/* 产品 1 */}
+        <div style={{ backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e5e7eb' }}>
+          <img src="/gym.jpg.png" alt="Gym" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+          <div style={{ padding: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0' }}>Gym & Fitness Turf</h3>
+            <p style={{ color: '#666' }}>High density for heavy training.</p>
           </div>
-
-          <div style={cardStyle}>
-            <img src="/golf.jpg.png" alt="Golf" style={imgStyle} />
-            <div style={{ padding: '25px' }}>
-              <h3 style={{ fontSize: '22px', marginBottom: '10px' }}>Professional Golf Green</h3>
-              <p style={{ color: '#64748b', lineHeight: '1.6' }}>Superior putting surface providing realistic ball roll.</p>
-            </div>
-          </div>
-
-          <div style={cardStyle}>
-            <img src="/pet.jpg.png" alt="Pet" style={imgStyle} />
-            <div style={{ padding: '25px' }}>
-              <h3 style={{ fontSize: '22px', marginBottom: '10px' }}>Pet Friendly Turf</h3>
-              <p style={{ color: '#64748b', lineHeight: '1.6' }}>Soft, non-toxic fibers. Safe for pets and easy to clean.</p>
-            </div>
-          </div>
-
         </div>
-      </main>
 
-      <footer style={{ backgroundColor: '#0f172a', color: '#94a3b8', padding: '40px 20px', textAlign: 'center' }}>
-        <p style={{ color: 'white' }}>© 2026 {companyName}</p>
-        <p>WhatsApp: +86 150 7555 0800</p>
+        {/* 产品 2 */}
+        <div style={{ backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e5e7eb' }}>
+          <img src="/golf.jpg.png" alt="Golf" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+          <div style={{ padding: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0' }}>Professional Golf Green</h3>
+            <p style={{ color: '#666' }}>Realistic ball roll for putting.</p>
+          </div>
+        </div>
+
+        {/* 产品 3 */}
+        <div style={{ backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e5e7eb' }}>
+          <img src="/pet.jpg.png" alt="Pet" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+          <div style={{ padding: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0' }}>Pet Friendly Grass</h3>
+            <p style={{ color: '#666' }}>Safe, soft and easy to clean.</p>
+          </div>
+        </div>
+
+      </div>
+
+      {/* 页脚 */}
+      <footer style={{ textAlign: 'center', padding: '40px', color: '#999' }}>
+        <p>© 2026 {companyName}</p>
       </footer>
     </div>
   );
 }
-
-const cardStyle = { backgroundColor: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)', border: '1px solid #e2e8f0' };
-const imgStyle = { width: '100%', height: '240px', objectFit: 'cover' };
