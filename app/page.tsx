@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Home() {
   const companyName = "Handan Oudoman Sports Technology Co., Ltd.";
-  const myNumber = "8615075550800"; 
+  const myNumber = "86 18831097125"; 
 
   return (
     <div style={{ backgroundColor: '#f8fafc', minHeight: '100vh', fontFamily: 'sans-serif', color: '#1e293b' }}>
@@ -55,7 +55,7 @@ export default function Home() {
       {/* Footer */}
       <footer style={{ backgroundColor: '#0f172a', color: '#94a3b8', padding: '60px 24px', textAlign: 'center' }}>
         <p style={{ color: 'white', fontWeight: 'bold' }}>© 2026 {companyName}</p>
-        <p>WhatsApp/WeChat: +86 150 7555 0800</p>
+        <p>WhatsApp/WeChat: +86 188 3109 7125</p>
       </footer>
     </div>
   );
