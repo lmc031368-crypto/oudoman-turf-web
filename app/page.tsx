@@ -1,131 +1,135 @@
 "use client";
-
 import React from 'react';
 
-// 手动定义图标组件，彻底避免库导入报错
-const Icons = {
-  Facebook: () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-  ),
-  Instagram: () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-  ),
-  WhatsApp: () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"/></svg>
-  ),
-  FileText: () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
-  )
-};
-
 export default function Home() {
-  const companyName = "Handan oudoman Sports Technology CO.,Ltd";
-  const myNumber = "8615075550800"; 
-  const waMessage = encodeURIComponent(`Hello, I'm interested in products from ${companyName}.`);
-
-  const featuredProducts = [
-    { name: "Gym Turf", img: "/gym.jpg", desc: "High-density fibers for heavy sled training." },
-    { name: "Golf Green", img: "/golf.jpg", desc: "Professional putting surface with realistic roll." },
-    { name: "Pet Grass", img: "/pet.jpg", desc: "Anti-bacterial turf perfect for pets." }
-  ];
-
-  // 修复了 items 语法逻辑
-  const categories = [
-    { title: "Sports Turf", items: ["Football Grass", "Tennis Court", "Padel Court"] },
-    { title: "Landscaping", items: ["Garden Lawn", "Roof Garden", "Balcony Decor"] },
-    { title: "Accessories", items: ["Installation Glue", "Joint Tape", "Shock Pad"] }
-  ];
+  const companyName = "Handan Oudoman Sports Technology Co., Ltd.";
+  const myNumber = "8615075550800"; // Your WhatsApp number
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
-      {/* 侧边悬浮社交栏 */}
-      <div className="fixed right-6 bottom-10 flex flex-col gap-4 z-50">
-        <a href="https://facebook.com" target="_blank" className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center shadow-2xl hover:-translate-x-2 transition-all">
-          <Icons.Facebook />
-        </a>
-        <a href="https://instagram.com" target="_blank" className="w-12 h-12 bg-[#E4405F] text-white rounded-full flex items-center justify-center shadow-2xl hover:-translate-x-2 transition-all">
-          <Icons.Instagram />
-        </a>
-        <a href={`https://wa.me/${myNumber}`} target="_blank" className="w-12 h-12 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:-translate-x-2 transition-all">
-          <Icons.WhatsApp />
-        </a>
-      </div>
-
-      <nav className="flex justify-between items-center px-6 md:px-12 py-5 border-b sticky top-0 bg-white/90 backdrop-blur-sm z-50">
-        <h1 className="text-xl font-black text-green-700 uppercase">{companyName}</h1>
-        <a href={`https://wa.me/${myNumber}`} target="_blank" className="bg-green-500 text-white px-5 py-2 rounded-full font-bold hover:bg-green-600 transition shadow-lg text-sm">
-          WhatsApp Us
+    <div style={{ backgroundColor: '#f8fafc', minHeight: '100vh', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#1e293b' }}>
+      
+      {/* Navigation Bar */}
+      <nav style={{ backgroundColor: '#ffffff', padding: '18px 6%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', position: 'sticky', top: 0, zIndex: 100 }}>
+        <div style={{ fontSize: '24px', fontWeight: '800', color: '#166534', letterSpacing: '-0.5px' }}>OUDMAN TURF</div>
+        <a href={`https://wa.me/${myNumber}`} style={{ backgroundColor: '#22c55e', color: 'white', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '600', fontSize: '14px' }}>
+          INQUIRY NOW
         </a>
       </nav>
 
-      <header className="py-24 px-6 text-center bg-gray-50">
-        <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-          Professional <span className="text-green-600">Artificial Turf</span>
-        </h2>
-        <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">High-performance synthetic grass solutions for worldwide projects.</p>
-        <a href={`https://wa.me/${myNumber}`} className="bg-black text-white px-12 py-4 rounded-full font-bold text-lg hover:opacity-80 transition shadow-xl">
-          Get Free Samples
-        </a>
+      {/* Hero Section */}
+      <header style={{ 
+        textAlign: 'center', 
+        padding: '100px 20px', 
+        background: 'linear-gradient(135deg, #166534 0%, #14532d 100%)', 
+        color: 'white' 
+      }}>
+        <h1 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '20px', lineHeight: '1.2' }}>{companyName}</h1>
+        <p style={{ fontSize: '20px', opacity: '0.9', maxWidth: '800px', margin: '0 auto 40px', fontWeight: '300' }}>
+          Leading Manufacturer of Premium Artificial Grass & Synthetic Turf Solutions for Global Markets.
+        </p>
+        <div style={{ display: 'flex', gap: '15px', justifyContent: 'center' }}>
+          <div style={{ border: '1px solid rgba(255,255,255,0.3)', padding: '10px 20px', borderRadius: '20px', fontSize: '14px' }}>✓ UV Protection</div>
+          <div style={{ border: '1px solid rgba(255,255,255,0.3)', padding: '10px 20px', borderRadius: '20px', fontSize: '14px' }}>✓ Eco-Friendly</div>
+          <div style={{ border: '1px solid rgba(255,255,255,0.3)', padding: '10px 20px', borderRadius: '20px', fontSize: '14px' }}>✓ 8-10 Years Warranty</div>
+        </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24">
-          {featuredProducts.map((p, i) => (
-            <div key={i} className="group border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition">
-              <div className="h-64 bg-gray-200">
-                <img 
-                  src={p.img} 
-                  alt={p.name} 
-                  className="w-full h-full object-cover"
-                  onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/600x400?text=Turf"; }} 
-                />
-              </div>
-              <div className="p-8">
-                <h4 className="font-bold text-2xl mb-3">{p.name}</h4>
-                <p className="text-gray-500 text-sm mb-8">{p.desc}</p>
-                <a href={`https://wa.me/${myNumber}`} className="flex items-center justify-center gap-2 w-full py-3 border-2 border-black rounded-xl font-bold hover:bg-black hover:text-white transition">
-                  <Icons.WhatsApp /> Inquire Now
-                </a>
-              </div>
+      {/* Product Catalog */}
+      <main style={{ maxWidth: '1200px', margin: '80px auto', padding: '0 24px' }}>
+        <h2 style={{ textAlign: 'center', fontSize: '36px', fontWeight: '700', marginBottom: '60px' }}>Our Featured Products</h2>
+        
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+          gap: '40px' 
+        }}>
+          {/* Card 1: Gym Turf */}
+          <div style={cardStyle}>
+            <div style={{ overflow: 'hidden', height: '240px' }}>
+              <img src="/gym.jpg" alt="Gym Turf" style={imgStyle} />
             </div>
-          ))}
-        </div>
+            <div style={{ padding: '30px' }}>
+              <h3 style={productTitleStyle}>Gym & Fitness Turf</h3>
+              <p style={productDescStyle}>High-density reinforced fibers designed for heavy sled training and intensive indoor sports. Available in multiple colors.</p>
+              <button style={btnStyle}>Technical Details</button>
+            </div>
+          </div>
 
-        <section className="bg-gray-50 rounded-[2.5rem] p-8 md:p-16 border border-gray-100">
-          <h3 className="text-2xl font-bold mb-12 border-l-4 border-green-500 pl-4">Full Product Category</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {categories.map((cat, i) => (
-              <div key={i}>
-                <h4 className="font-extrabold text-lg text-green-700 mb-6 uppercase tracking-widest">{cat.title}</h4>
-                <ul className="space-y-4">
-                  {cat.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600">
-                      <span className="mr-3 text-green-500 font-bold">✓</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-16 text-center p-10 border-2 border-dashed border-gray-300 rounded-3xl bg-white shadow-inner">
-            <p className="text-gray-500 italic mb-6">Need a complete price list?</p>
-            <div className="flex flex-col md:flex-row justify-center gap-5">
-              <a href="/catalog.pdf" target="_blank" className="bg-green-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-green-700 transition flex items-center justify-center gap-2">
-                <Icons.FileText /> View PDF Catalog
-              </a>
-              <a href={`https://wa.me/${myNumber}?text=${waMessage}`} className="bg-green-50 text-green-700 px-10 py-4 rounded-xl font-bold hover:bg-green-100 transition flex items-center justify-center gap-2">
-                <Icons.WhatsApp /> Contact WhatsApp
-              </a>
+          {/* Card 2: Golf Green */}
+          <div style={cardStyle}>
+            <div style={{ overflow: 'hidden', height: '240px' }}>
+              <img src="/golf.jpg" alt="Golf Putting Green" style={imgStyle} />
+            </div>
+            <div style={{ padding: '30px' }}>
+              <h3 style={productTitleStyle}>Professional Golf Green</h3>
+              <p style={productDescStyle}>Superior putting surface providing realistic ball roll and speed. Perfect for backyard greens and professional training facilities.</p>
+              <button style={btnStyle}>Request Sample</button>
             </div>
           </div>
-        </section>
+
+          {/* Card 3: Pet Grass */}
+          <div style={cardStyle}>
+            <div style={{ overflow: 'hidden', height: '240px' }}>
+              <img src="/pet.jpg" alt="Pet Friendly Grass" style={imgStyle} />
+            </div>
+            <div style={{ padding: '30px' }}>
+              <h3 style={productTitleStyle}>Pet Friendly Turf</h3>
+              <p style={productDescStyle}>Special antimicrobial backing with fast drainage system. Safe for pets, easy to clean, and stays green all year round.</p>
+              <button style={btnStyle}>Get a Quote</button>
+            </div>
+          </div>
+        </div>
       </main>
 
-      <footer className="py-20 bg-gray-900 text-white text-center">
-        <p className="font-black mb-8 uppercase text-green-500">{companyName}</p>
-        <p className="text-xs text-gray-500 tracking-widest">© 2026 {companyName}. All Rights Reserved.</p>
+      {/* Footer */}
+      <footer style={{ backgroundColor: '#0f172a', color: '#94a3b8', padding: '60px 24px', textAlign: 'center' }}>
+        <div style={{ color: 'white', fontSize: '20px', fontWeight: 'bold', marginBottom: '20px' }}>OUDMAN TURF</div>
+        <p style={{ marginBottom: '10px' }}>© 2026 {companyName}</p>
+        <p style={{ marginBottom: '10px' }}>Factory Address: Handan Industrial Zone, Hebei Province, China</p>
+        <p style={{ color: '#22c55e', fontWeight: 'bold' }}>WhatsApp/WeChat: +86 150 7555 0800</p>
       </footer>
     </div>
   );
 }
+
+// Global Styles
+const cardStyle = {
+  backgroundColor: '#ffffff',
+  borderRadius: '16px',
+  overflow: 'hidden',
+  boxShadow: '0 10px 25px -5px rgba(0,0,0,0.05)',
+  border: '1px solid #e2e8f0'
+};
+
+const imgStyle = {
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  transition: 'transform 0.5s ease'
+};
+
+const productTitleStyle = {
+  fontSize: '22px',
+  fontWeight: '700',
+  marginBottom: '12px',
+  color: '#0f172a'
+};
+
+const productDescStyle = {
+  fontSize: '15px',
+  lineHeight: '1.6',
+  color: '#64748b',
+  marginBottom: '20px',
+  minHeight: '72px'
+};
+
+const btnStyle = {
+  width: '100%',
+  padding: '10px',
+  backgroundColor: '#f1f5f9',
+  border: 'none',
+  borderRadius: '8px',
+  color: '#475569',
+  fontWeight: '600',
+  cursor: 'pointer'
+};
