@@ -17,51 +17,54 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: '#f0fdf4', minHeight: '100vh', fontFamily: 'sans-serif', margin: 0, padding: 0 }}>
       
-      {/* 顶部导航 */}
+      {/* 顶部导航栏 */}
       <nav style={{ backgroundColor: '#fff', padding: '15px 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', position: 'sticky', top: 0, zIndex: 1000 }}>
         <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#166534' }}>OUDMAN TURF</div>
-        <a href={socialLinks.whatsapp} target="_blank" style={{ background: '#22c55e', color: '#fff', padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold' }}>WhatsApp Us</a>
+        <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" style={{ background: '#22c55e', color: '#fff', padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold' }}>WhatsApp</a>
       </nav>
 
-      {/* 🛑 核心更新：这里的背景色换成了高尔夫球场图片 */}
+      {/* 核心部分：使用 1.1.jpg 作为海景背景图 */}
       <header style={{ 
         textAlign: 'center', 
-        padding: '120px 20px', 
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(/images/golf_hero.jpg)', 
+        padding: '140px 20px', 
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(/images/1.1.jpg)', 
         backgroundSize: 'cover', 
         backgroundPosition: 'center', 
         color: 'white' 
       }}>
-        <h1 style={{ fontSize: '38px', margin: 0, fontWeight: '800', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{companyName}</h1>
-        <p style={{ opacity: 0.95, marginTop: '20px', fontSize: '18px', textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>
-          Premier Manufacturer of Professional Artificial Turf for Sports & Landscaping.
+        <h1 style={{ fontSize: '38px', margin: '0 auto', fontWeight: '800', maxWidth: '900px', textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>{companyName}</h1>
+        <p style={{ opacity: 0.95, marginTop: '20px', fontSize: '20px', textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
+          Premier Manufacturer of Professional Artificial Turf for Sports & Landscape.
         </p>
       </header>
 
-      {/* 产品展示区域 */}
+      {/* 产品展示网格 */}
       <main style={{ maxWidth: '1100px', margin: '60px auto', padding: '0 20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
         
-        <div style={{ background: '#fff', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.05)' }}>
-          <img src="/images/gym.jpg.png" alt="Gym Turf" style={{ width: '100%', height: '250px', objectFit: 'cover' }} 
+        {/* 健身房草坪 */}
+        <div style={{ background: '#fff', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
+          <img src="/images/gym.jpg.png" alt="Gym" style={{ width: '100%', height: '250px', objectFit: 'cover' }} 
                onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/400x250?text=Gym+Turf"; }} />
-          <div style={{ padding: '25px', textAlign: 'center' }}><h3 style={{ color: '#166534' }}>Gym Turf</h3><p>Durable for heavy sled training.</p></div>
+          <div style={{ padding: '25px', textAlign: 'center' }}><h3 style={{ color: '#166534' }}>Gym & Fitness</h3><p>Durable for high-performance training.</p></div>
         </div>
 
-        <div style={{ background: '#fff', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.05)' }}>
-          <img src="/images/golf.jpg.png" alt="Golf Turf" style={{ width: '100%', height: '250px', objectFit: 'cover' }} 
-               onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/400x260?text=Golf+Turf"; }} />
-          <div style={{ padding: '25px', textAlign: 'center' }}><h3 style={{ color: '#166534' }}>Professional Golf Green</h3><p>Superior realistic ball roll.</p></div>
+        {/* 高尔夫草坪 */}
+        <div style={{ background: '#fff', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
+          <img src="/images/golf.jpg.png" alt="Golf" style={{ width: '100%', height: '250px', objectFit: 'cover' }} 
+               onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/400x250?text=Golf+Turf"; }} />
+          <div style={{ padding: '25px', textAlign: 'center' }}><h3 style={{ color: '#166534' }}>Professional Golf</h3><p>Superior and realistic putting surfaces.</p></div>
         </div>
 
-        <div style={{ background: '#fff', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.05)' }}>
-          <img src="/images/pet.jpg.png" alt="Pet Turf" style={{ width: '100%', height: '250px', objectFit: 'cover' }} 
+        {/* 宠物草坪 */}
+        <div style={{ background: '#fff', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
+          <img src="/images/pet.jpg.png" alt="Pet" style={{ width: '100%', height: '250px', objectFit: 'cover' }} 
                onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/400x250?text=Pet+Turf"; }} />
-          <div style={{ padding: '25px', textAlign: 'center' }}><h3 style={{ color: '#166534' }}>Pet Friendly Grass</h3><p>Safe, non-toxic & easy to clean.</p></div>
+          <div style={{ padding: '25px', textAlign: 'center' }}><h3 style={{ color: '#166534' }}>Pet Friendly</h3><p>Safe, non-toxic and easy to clean.</p></div>
         </div>
 
       </main>
 
-      {/* 页脚 - 包含彩色社媒图标 */}
+      {/* 页脚与社交媒体图标 */}
       <footer style={{ backgroundColor: '#fff', padding: '60px 20px', textAlign: 'center', borderTop: '1px solid #eee' }}>
         <h3 style={{ color: '#166534', marginBottom: '30px' }}>Follow Our Social Media</h3>
         
@@ -69,7 +72,7 @@ export default function Home() {
           <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="35" height="35" alt="FB"/></a>
           <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="35" height="35" alt="IG"/></a>
           <a href={socialLinks.tiktok} target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="35" height="35" alt="TK"/></a>
-          <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="35" height="35" alt="IN"/></a>
+          <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="35" height="35" alt="LI"/></a>
         </div>
 
         <p>Email: {myEmail}</p>
