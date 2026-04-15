@@ -5,7 +5,6 @@ export default function Home() {
   const companyName = "Handan Oudoman Sports Technology Co., Ltd.";
   const myWhatsApp = "8618831097125"; 
 
-  // 社交媒体链接
   const socialLinks = {
     whatsapp: `https://wa.me/${myWhatsApp}`,
     facebook: "https://www.facebook.com/profile.php?id=61582199365054", 
@@ -33,19 +32,19 @@ export default function Home() {
         <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" style={{ background: '#22c55e', color: '#fff', padding: '10px 22px', borderRadius: '30px', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>WhatsApp Online</a>
       </nav>
 
-      {/* 首屏全屏大图区 */}
+      {/* 首屏大图区 */}
       <header style={{ 
         textAlign: 'center', 
         padding: '160px 20px', 
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(/images/1.1.jpg)', 
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url(/images/1.1.jpg)', 
         backgroundSize: 'cover', 
         backgroundPosition: 'center', 
         color: 'white'
       }}>
-        <h1 style={{ fontSize: '42px', margin: '0 auto', fontWeight: '800', maxWidth: '950px', lineHeight: '1.2', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>{companyName}</h1>
+        <h1 style={{ fontSize: '42px', margin: '0 auto', fontWeight: '800', maxWidth: '950px', lineHeight: '1.2', textShadow: '2px 2px 10px rgba(0,0,0,0.5)' }}>{companyName}</h1>
         <p style={{ marginTop: '20px', fontSize: '22px', opacity: 0.9 }}>Professional Artificial Turf Manufacturer</p>
         
-        {/* PDF 下载按钮 - 已经精确匹配你的文件名 products-details.pdf.pdf */}
+        {/* 🚀 终极修复：精准匹配 products-details.pdf.pdf */}
         <div style={{ marginTop: '45px' }}>
           <a 
             href="/products-details.pdf.pdf" 
@@ -86,33 +85,27 @@ export default function Home() {
         ))}
       </main>
 
-      {/* 底部与彩色社交图标 */}
+      {/* 底部与可爱图标 */}
       <footer style={{ backgroundColor: '#fff', padding: '80px 20px', textAlign: 'center', borderTop: '1px solid #eee' }}>
         <h3 style={{ color: '#166534', fontSize: '28px', marginBottom: '40px' }}>Connect With Us</h3>
         
-        {/* 社交媒体图标区域 */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '35px', marginBottom: '40px', flexWrap: 'wrap' }}>
-          
           <a href={socialLinks.facebook} target="_blank" style={{ textDecoration: 'none', textAlign: 'center' }}>
             <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="45" height="45" alt="Facebook" />
             <div style={{ fontSize: '12px', color: '#3b5998', fontWeight: 'bold', marginTop: '8px' }}>Facebook</div>
           </a>
-
           <a href={socialLinks.instagram} target="_blank" style={{ textDecoration: 'none', textAlign: 'center' }}>
             <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="45" height="45" alt="Instagram" />
             <div style={{ fontSize: '12px', color: '#e1306c', fontWeight: 'bold', marginTop: '8px' }}>Instagram</div>
           </a>
-
           <a href={socialLinks.tiktok} target="_blank" style={{ textDecoration: 'none', textAlign: 'center' }}>
             <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="45" height="45" alt="TikTok" />
             <div style={{ fontSize: '12px', color: '#000', fontWeight: 'bold', marginTop: '8px' }}>TikTok</div>
           </a>
-
           <a href={socialLinks.whatsapp} target="_blank" style={{ textDecoration: 'none', textAlign: 'center' }}>
             <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="45" height="45" alt="WhatsApp" />
             <div style={{ fontSize: '12px', color: '#25D366', fontWeight: 'bold', marginTop: '8px' }}>WhatsApp</div>
           </a>
-
         </div>
 
         <p style={{ color: '#666', fontSize: '18px' }}>Email: wangcathy633@gmail.com</p>
