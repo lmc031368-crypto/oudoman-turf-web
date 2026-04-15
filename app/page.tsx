@@ -14,78 +14,99 @@ export default function Home() {
   };
 
   return (
-    <div style={{ backgroundColor: '#f9fafb', minHeight: '100vh', fontFamily: 'sans-serif', color: '#333' }}>
+    <div style={{ backgroundColor: '#f0fdf4', minHeight: '100vh', fontFamily: 'sans-serif' }}>
       
-      {/* 导航栏组件 */}
-      <nav style={{ backgroundColor: '#fff', padding: '15px 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.1)', position: 'sticky', top: 0, zIndex: 1000 }}>
-        <div style={{ fontSize: '20px', fontWeight: 'bold', color: '#166534' }}>OUDMAN TURF</div>
-        <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" style={{ background: '#22c55e', color: '#fff', padding: '10px 20px', borderRadius: '30px', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Contact WhatsApp</a>
+      {/* 顶部导航栏 - 保持之前的简洁样式 */}
+      <nav style={{ 
+        backgroundColor: 'rgba(255,255,255,0.9)', 
+        backdropFilter: 'blur(10px)',
+        padding: '15px 5%', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+        position: 'sticky', 
+        top: 0, 
+        zIndex: 1000,
+        borderBottom: '1px solid #e5e7eb'
+      }}>
+        <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#166534' }}>OUDMAN TURF</div>
+        <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" style={{ background: '#22c55e', color: '#fff', padding: '10px 22px', borderRadius: '30px', textDecoration: 'none', fontWeight: 'bold' }}>WhatsApp</a>
       </nav>
 
-      {/* 首屏大图 - 使用 1.1.jpg */}
+      {/* 之前的排版：全屏大图 Hero Section */}
       <header style={{ 
         textAlign: 'center', 
-        padding: '120px 20px', 
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/1.1.jpg)', 
+        padding: '160px 20px', 
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url(/images/1.1.jpg)', 
         backgroundSize: 'cover', 
         backgroundPosition: 'center', 
-        color: 'white' 
+        color: 'white',
+        marginBottom: '40px'
       }}>
-        <h1 style={{ fontSize: '32px', marginBottom: '20px', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>{companyName}</h1>
-        <p style={{ fontSize: '18px', maxWidth: '800px', margin: '0 auto' }}>Leading manufacturer of landscape and sports artificial grass.</p>
+        <h1 style={{ fontSize: '42px', margin: '0 auto', fontWeight: '800', maxWidth: '900px', lineHeight: '1.2' }}>{companyName}</h1>
+        <p style={{ marginTop: '25px', fontSize: '22px', opacity: 0.9 }}>Professional Artificial Turf Manufacturer</p>
+        
+        {/* PDF 按钮直接放在 Hero 区域，更显眼 */}
+        <div style={{ marginTop: '40px' }}>
+          <a 
+            href="/products-details.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ 
+              backgroundColor: '#166534', 
+              color: '#fff', 
+              padding: '16px 35px', 
+              borderRadius: '50px', 
+              textDecoration: 'none', 
+              fontWeight: 'bold',
+              fontSize: '18px',
+              border: '2px solid #166534',
+              display: 'inline-block'
+            }}
+          >
+            📂 View Technical Details (PDF)
+          </a>
+        </div>
       </header>
 
-      {/* 🔴 核心功能：PDF 技术参数下载区 */}
-      <section style={{ maxWidth: '1000px', margin: '60px auto', padding: '40px 20px', backgroundColor: '#fff', borderRadius: '20px', textAlign: 'center', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-        <h2 style={{ color: '#166534', marginBottom: '15px' }}>Technical Data & Product Catalog</h2>
-        <p style={{ color: '#666', marginBottom: '30px' }}>Discover our detailed parameters including Pile Height, Dtex, and Gauge details.</p>
+      {/* 之前的排版：产品展示网格 */}
+      <main style={{ maxWidth: '1200px', margin: '60px auto', padding: '0 20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
         
-        {/* 这里是你的 PDF 按钮，注意 href 必须和文件名一致 */}
-        <a 
-          href="/products.pdf" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{ 
-            backgroundColor: '#166534', 
-            color: '#fff', 
-            padding: '18px 40px', 
-            borderRadius: '50px', 
-            textDecoration: 'none', 
-            fontWeight: 'bold',
-            fontSize: '18px',
-            display: 'inline-block',
-            transition: 'transform 0.2s'
-          }}
-        >
-          📂 Open Product Details (PDF)
-        </a>
-        <p style={{ fontSize: '12px', color: '#999', marginTop: '15px' }}>*Click to view or save the technical specifications.</p>
-      </section>
+        <div style={{ background: '#fff', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+          <img src="/images/gym.jpg.png" alt="Gym" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
+          <div style={{ padding: '30px', textAlign: 'center' }}>
+            <h3 style={{ color: '#166534', fontSize: '22px' }}>Gym & Fitness</h3>
+            <p style={{ color: '#666' }}>High-density durable turf for crossfit.</p>
+          </div>
+        </div>
 
-      {/* 产品网格展示 */}
-      <main style={{ maxWidth: '1100px', margin: '40px auto', padding: '0 20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
-        <div style={{ background: '#fff', borderRadius: '12px', overflow: 'hidden' }}>
-          <img src="/images/gym.jpg.png" alt="Gym" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-          <div style={{ padding: '20px' }}><h3>Gym Turf</h3></div>
+        <div style={{ background: '#fff', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+          <img src="/images/golf.jpg.png" alt="Golf" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
+          <div style={{ padding: '30px', textAlign: 'center' }}>
+            <h3 style={{ color: '#166534', fontSize: '22px' }}>Professional Golf</h3>
+            <p style={{ color: '#666' }}>True-to-life putting surface performance.</p>
+          </div>
         </div>
-        <div style={{ background: '#fff', borderRadius: '12px', overflow: 'hidden' }}>
-          <img src="/images/golf.jpg.png" alt="Golf" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-          <div style={{ padding: '20px' }}><h3>Golf Green</h3></div>
+
+        <div style={{ background: '#fff', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+          <img src="/images/pet.jpg.png" alt="Pet" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
+          <div style={{ padding: '30px', textAlign: 'center' }}>
+            <h3 style={{ color: '#166534', fontSize: '22px' }}>Landscape & Pet</h3>
+            <p style={{ color: '#666' }}>Natural looking and easy to drain.</p>
+          </div>
         </div>
-        <div style={{ background: '#fff', borderRadius: '12px', overflow: 'hidden' }}>
-          <img src="/images/pet.jpg.png" alt="Pet" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-          <div style={{ padding: '20px' }}><h3>Pet Landscape</h3></div>
-        </div>
+
       </main>
 
-      {/* 页脚 */}
-      <footer style={{ textAlign: 'center', padding: '40px', borderTop: '1px solid #eee', marginTop: '60px' }}>
-        <p>Email: {myEmail}</p>
-        <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center', gap: '20px' }}>
+      {/* 之前的排版：简洁页脚 */}
+      <footer style={{ backgroundColor: '#fff', padding: '60px 20px', textAlign: 'center', borderTop: '1px solid #eee' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginBottom: '30px' }}>
           <a href={socialLinks.facebook} target="_blank">Facebook</a>
           <a href={socialLinks.instagram} target="_blank">Instagram</a>
           <a href={socialLinks.tiktok} target="_blank">TikTok</a>
         </div>
+        <p style={{ color: '#666' }}>Email: {myEmail}</p>
+        <p style={{ fontSize: '14px', color: '#999', marginTop: '20px' }}>© 2026 OUDOMAN TURF. All Rights Reserved.</p>
       </footer>
     </div>
   );
