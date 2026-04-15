@@ -32,7 +32,7 @@ export default function Home() {
         <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" style={{ background: '#22c55e', color: '#fff', padding: '10px 22px', borderRadius: '30px', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>WhatsApp Online</a>
       </nav>
 
-      {/* 首屏大图区 */}
+      {/* 首屏全屏大图区 */}
       <header style={{ 
         textAlign: 'center', 
         padding: '160px 20px', 
@@ -44,10 +44,10 @@ export default function Home() {
         <h1 style={{ fontSize: '42px', margin: '0 auto', fontWeight: '800', maxWidth: '950px', lineHeight: '1.2', textShadow: '2px 2px 10px rgba(0,0,0,0.5)' }}>{companyName}</h1>
         <p style={{ marginTop: '20px', fontSize: '22px', opacity: 0.9 }}>Professional Artificial Turf Manufacturer</p>
         
-        {/* 🚀 终极修复：精准匹配 products-details.pdf.pdf */}
+        {/* ✅ 修正后的 PDF 路径：/images/products-details.pdf */}
         <div style={{ marginTop: '45px' }}>
           <a 
-            href="/products-details.pdf.pdf" 
+            href="/images/products-details.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             style={{ 
