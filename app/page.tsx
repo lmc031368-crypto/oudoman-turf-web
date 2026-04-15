@@ -74,7 +74,23 @@ export default function Home() {
           <a href={socialLinks.tiktok} target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="35" height="35" alt="TK"/></a>
           <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="35" height="35" alt="LI"/></a>
         </div>
-
+<div style={{ textAlign: 'center', margin: '40px 0' }}>
+  <a 
+    href="/PRODUCTS DETAILS.pdf" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style={{ 
+      backgroundColor: '#166534', 
+      color: '#fff', 
+      padding: '12px 25px', 
+      borderRadius: '8px', 
+      textDecoration: 'none', 
+      fontWeight: 'bold' 
+    }}
+  >
+    View Technical Specifications (PDF)
+  </a>
+</div>
         <p>Email: {myEmail}</p>
         <p style={{ fontSize: '14px', color: '#999', marginTop: '20px' }}>© 2026 OUDMAN TURF. All Rights Reserved.</p>
       </footer>
