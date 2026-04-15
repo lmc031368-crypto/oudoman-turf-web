@@ -5,6 +5,7 @@ export default function Home() {
   const companyName = "Handan Oudoman Sports Technology Co., Ltd.";
   const myWhatsApp = "8618831097125"; 
 
+  // 社交媒体链接
   const socialLinks = {
     whatsapp: `https://wa.me/${myWhatsApp}`,
     facebook: "https://www.facebook.com/profile.php?id=61582199365054", 
@@ -44,7 +45,7 @@ export default function Home() {
         <h1 style={{ fontSize: '42px', margin: '0 auto', fontWeight: '800', maxWidth: '950px', lineHeight: '1.2', textShadow: '2px 2px 10px rgba(0,0,0,0.5)' }}>{companyName}</h1>
         <p style={{ marginTop: '20px', fontSize: '22px', opacity: 0.9 }}>Professional Artificial Turf Manufacturer</p>
         
-        {/* ✅ 修正后的 PDF 路径：/images/products-details.pdf */}
+        {/* PDF 下载按钮 - 路径指向 /images/products-details.pdf */}
         <div style={{ marginTop: '45px' }}>
           <a 
             href="/images/products-details.pdf" 
@@ -85,7 +86,7 @@ export default function Home() {
         ))}
       </main>
 
-      {/* 底部与可爱图标 */}
+      {/* 底部与彩色社交图标 */}
       <footer style={{ backgroundColor: '#fff', padding: '80px 20px', textAlign: 'center', borderTop: '1px solid #eee' }}>
         <h3 style={{ color: '#166534', fontSize: '28px', marginBottom: '40px' }}>Connect With Us</h3>
         
